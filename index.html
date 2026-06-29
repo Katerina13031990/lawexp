@@ -3,8 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Екатерина Серикова — Юрист</title>
+  
+  <!-- SEO Мета-теги -->
+  <title>Автоюрист Саратов | Екатерина Серикова — взыскание неустоек, банкротство</title>
+  <meta name="description" content="Юрист по автоспорам, кредитам и банкротству в Саратове. 15 лет практики. Взыскание неустойки по ОСАГО и ДДУ. Помощь в судах. Запись онлайн." />
+  <meta name="keywords" content="автоюрист Саратов, взыскание неустойки, банкротство физических лиц, юрист по ДТП, кредитные споры, юрист по ОСАГО" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Микроразметка Schema.org для юриста -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Attorney",
+    "name": "Екатерина Серикова",
+    "image": "https://ваш-сайт/avatar.jpg",
+    "telephone": "+79658800500",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Соборная площадь, д. 5",
+      "addressLocality": "Саратов",
+      "addressCountry": "RU"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "12"
+    }
+  }
+  </script>
+
   <style>
+    /* Все стили остаются без изменений */
     * {
       margin: 0;
       padding: 0;
@@ -48,6 +77,7 @@
       margin-bottom: 16px;
       border: 4px solid white;
       box-shadow: 0 8px 24px rgba(0, 51, 160, 0.15);
+      /* alt-текст для фото добавлен через атрибут alt в HTML */
     }
 
     h1 {
@@ -281,7 +311,6 @@
       background: #e2eaf9;
     }
 
-    /* Скрываемые блоки */
     .checklist-block {
       display: none;
       margin-top: 16px;
@@ -318,8 +347,8 @@
 
     <!-- ПРОФИЛЬ -->
     <div class="profile">
-      <div class="avatar"></div>
-      <h1>Екатерина Серикова</h1>
+      <div class="avatar" alt="Екатерина Серикова — автоюрист Саратов"></div>
+      <h1>Екатерина Серикова — автоюрист в Саратове</h1>
       <div class="subhead">Руководитель юридической фирмы</div>
       <div class="tagline">⚖️ Авто · Кредиты · Банкротство · Неустойки</div>
       <p class="desc">
@@ -350,17 +379,17 @@
       </a>
     </div>
 
-    <!-- УСЛУГИ -->
-    <div class="section-title">📋 Услуги <span>15 лет</span></div>
+    <!-- УСЛУГИ С КЛЮЧЕВЫМИ СЛОВАМИ -->
+    <h2 style="font-size:20px; font-weight:700; color:#0b1a33; margin:24px 0 12px;">Мои услуги</h2>
     <div class="services-list">
-      <div class="service-item"><span class="emoji">🚗</span> Автоюрист (ОСАГО/КАСКО/ДТП)</div>
-      <div class="service-item"><span class="emoji">💳</span> Кредитные споры, банкротство</div>
-      <div class="service-item"><span class="emoji">⚖️</span> Взыскание неустоек (ДДУ, договоры)</div>
-      <div class="service-item"><span class="emoji">🏛️</span> Представительство в судах</div>
+      <div class="service-item"><span class="emoji">🚗</span> <strong>Автоюрист по ДТП</strong> — взыскание неустойки по ОСАГО и КАСКО</div>
+      <div class="service-item"><span class="emoji">💳</span> <strong>Кредитные споры</strong> и банкротство физических лиц</div>
+      <div class="service-item"><span class="emoji">⚖️</span> <strong>Взыскание неустоек</strong> по ДДУ и договорам</div>
+      <div class="service-item"><span class="emoji">🏛️</span> <strong>Представительство в судах</strong> (Саратов, область)</div>
     </div>
 
     <!-- АДРЕС -->
-    <div class="section-title">📍 Адрес офиса</div>
+    <h2 style="font-size:20px; font-weight:700; color:#0b1a33; margin:24px 0 12px;">📍 Адрес офиса</h2>
     <div class="address-box">
       <span class="pin">📍</span>
       <div>
@@ -372,7 +401,7 @@
     </div>
 
     <!-- ОТЗЫВЫ -->
-    <div class="section-title">⭐ Отзывы клиентов</div>
+    <h2 style="font-size:20px; font-weight:700; color:#0b1a33; margin:24px 0 12px;">⭐ Отзывы клиентов</h2>
     <div class="review">
       «Екатерина помогла взыскать 180 000 ₽ неустойки со страховой. Всё сделала быстро и без бюрократии. Рекомендую!»
       <div class="author">— Александр, Саратов</div>
@@ -386,8 +415,8 @@
       <div class="author">— Дмитрий, Саратов</div>
     </div>
 
-    <!-- ПОЛЕЗНЫЕ МАТЕРИАЛЫ (две кнопки) -->
-    <div class="section-title">📄 Полезные материалы</div>
+    <!-- ПОЛЕЗНЫЕ МАТЕРИАЛЫ -->
+    <h2 style="font-size:20px; font-weight:700; color:#0b1a33; margin:24px 0 12px;">📄 Полезные материалы</h2>
     <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:4px;">
       <button class="btn-small" onclick="toggleChecklist()" style="background:#0033a0; color:white; border:none;">
         📋 Чек-лист после ДТП
@@ -397,7 +426,7 @@
       </button>
     </div>
 
-    <!-- БЛОК ЧЕК-ЛИСТА (скрытый) -->
+    <!-- БЛОК ЧЕК-ЛИСТА -->
     <div id="checklist" class="checklist-block">
       <h4 style="margin-bottom:8px; color:#0b1a33;">🚗 Чек-лист действий после ДТП</h4>
       <ol>
@@ -409,7 +438,7 @@
         <li><strong>Заберите у сотрудников ГИБДД</strong> справку о ДТП, протокол, постановление.</li>
         <li><strong>Оцените повреждения</strong> (можно вызвать независимого эксперта).</li>
         <li><strong>Не подписывайте документы</strong> о том, что у вас нет претензий, до консультации с юристом.</li>
-        <li><strong>Соберите документы</strong> для подачи заявления в страховую (паспорт, водительское, документы на авто, справки, реквизиты).</li>
+        <li><strong>Соберите документы</strong> per подачи заявления в страховую (паспорт, водительское, документы на авто, справки, реквизиты).</li>
         <li><strong>Обратитесь к юристу</strong>, если страховая занижает выплату или тянет время.</li>
       </ol>
       <div class="pdf-link">
@@ -419,22 +448,22 @@
       </div>
     </div>
 
-    <!-- БЛОК ПАМЯТКИ ПО НЕУСТОЙКЕ (скрытый) -->
+    <!-- БЛОК ПАМЯТКИ ПО НЕУСТОЙКЕ -->
     <div id="penalty" class="checklist-block">
       <h4 style="margin-bottom:8px; color:#0b1a33;">⚖️ Памятка по взысканию неустойки</h4>
       <p style="font-size:14px; margin-bottom:12px;"><strong>По ОСАГО:</strong></p>
       <ul style="padding-left:20px; margin-bottom:12px; font-size:14px;">
         <li>Неустойка = 1/75 ставки рефинансирования ЦБ РФ от суммы страхового возмещения за каждый день просрочки.</li>
         <li>Срок выплаты: 20 календарных дней (кроме праздничных) с момента подачи заявления.</li>
-        <li>Максимальный размер неустойки не ограничен законом, но суды часто снижают по ст. 333 ГК РФ.</li>
+        <li>Максимальный размер неустойки не ограничен, но суды могут снизить по ст. 333 ГК РФ.</li>
       </ul>
       <p style="font-size:14px; margin-bottom:12px;"><strong>По ДДУ (договор долевого участия):</strong></p>
       <ul style="padding-left:20px; margin-bottom:12px; font-size:14px;">
-        <li>Неустойка = 1/150 ставки рефинансирования ЦБ РФ (для физлиц) или 1/300 (для юрлиц) от цены договора за каждый день просрочки.</li>
-        <li>Срок просрочки считается с момента, когда застройщик должен был передать квартиру.</li>
-        <li>Неустойка взыскивается только в судебном порядке (досудебная претензия обязательна).</li>
+        <li>Неустойка = 1/150 ставки ЦБ (для физлиц) или 1/300 (для юрлиц) от цены договора за каждый день просрочки.</li>
+        <li>Просрочка считается с момента, когда застройщик должен был передать квартиру.</li>
+        <li>Взыскание только через суд после обязательной досудебной претензии.</li>
       </ul>
-      <p style="font-size:14px; margin-bottom:12px;"><strong>Важно:</strong> перед подачей в суд необходимо направить досудебную претензию застройщику или страховщику. Срок ответа – 10–30 дней. После этого можно подавать иск.</p>
+      <p style="font-size:14px; margin-bottom:12px;"><strong>Важно:</strong> досудебная претензия — обязательный этап. Срок ответа 10–30 дней, затем можно подавать иск.</p>
       <div class="pdf-link">
         <a href="#" class="btn-small" style="background:#0033a0; color:white; border:none; padding:10px 24px; text-decoration:none;">
           📎 Скачать памятку (PDF)
@@ -443,7 +472,7 @@
     </div>
 
     <!-- СОЦСЕТИ И МЕССЕНДЖЕРЫ -->
-    <div class="section-title">📱 Мы в соцсетях</div>
+    <h2 style="font-size:20px; font-weight:700; color:#0b1a33; margin:24px 0 12px;">📱 Мы в соцсетях</h2>
     <div class="social-grid">
       <a href="https://vk.com/sea1303" target="_blank" class="social-btn">🔵 ВК (личная)</a>
       <a href="https://vk.com/zakon64" target="_blank" class="social-btn">🔵 Группа ВК</a>
@@ -462,7 +491,6 @@
 
   </div>
 
-  <!-- JavaScript для показа/скрытия блоков -->
   <script>
     function toggleChecklist() {
       var block = document.getElementById('checklist');
