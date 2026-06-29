@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Екатерина Серикова — Юрист</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+      background: #f5f7fa;
+      color: #1a1a1a;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      padding: 28px 24px 32px;
+      transition: 0.3s;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #d9e2ef;
+      background-image: url('avatar.jpg');
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 16px;
+      border: 4px solid white;
+      box-shadow: 0 8px 24px rgba(0, 51, 160, 0.15);
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #0b1a33;
+    }
+
+    .subhead {
+      font-size: 16px;
+      font-weight: 500;
+      color: #0033a0;
+      margin-top: 2px;
+    }
+
+    .tagline {
+      font-size: 15px;
+      color: #2c3e50;
+      margin-top: 8px;
+      background: #f0f4fe;
+      padding: 8px 18px;
+      border-radius: 40px;
+      display: inline-block;
+    }
+
+    .desc {
+      margin-top: 12px;
+      font-size: 15px;
+      color: #2c3e50;
+      max-width: 480px;
+    }
+
+    hr {
+      margin: 24px 0 20px;
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #d0d9e8, transparent);
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 8px 0 16px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #f0f4fe;
+      padding: 14px 18px;
+      border-radius: 60px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #0b1a33;
+      transition: 0.2s;
+      border: 1px solid transparent;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: #0033a0;
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0, 51, 160, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: #00247a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 51, 160, 0.3);
+    }
+
+    .btn-outline {
+      border-color: #d0d9e8;
+      background: #f0f4fe;
+    }
+
+    .btn-outline:hover {
+      background: #e6edf8;
+      border-color: #b0c0d8;
+    }
+
+    .btn .icon {
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0b1a33;
+      margin: 24px 0 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title span {
+      background: #0033a0;
+      color: white;
+      font-size: 14px;
+      border-radius: 40px;
+      padding: 0 12px;
+      line-height: 26px;
+    }
+
+    .services-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 8px 0 4px;
+    }
+
+    .service-item {
+      background: #f8faff;
+      border-radius: 16px;
+      padding: 14px 14px;
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid #eef3fc;
+    }
+
+    .service-item .emoji {
+      font-size: 18px;
+    }
+
+    @media (max-width: 450px) {
+      .services-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .address-box {
+      background: #f8faff;
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin: 12px 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-left: 4px solid #0033a0;
+    }
+
+    .address-box .pin {
+      font-size: 22px;
+    }
+
+    .review {
+      background: #f8faff;
+      border-radius: 18px;
+      padding: 16px 18px;
+      margin-top: 12px;
+      font-size: 14px;
+      color: #1f2a41;
+      border: 1px solid #eef3fc;
+    }
+
+    .review .author {
+      font-weight: 600;
+      color: #0033a0;
+      margin-top: 6px;
+    }
+
+    .social-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 12px 0 8px;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 40px;
+      background: #f0f4fe;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      color: #0b1a33;
+      transition: 0.2s;
+      border: 1px solid transparent;
+    }
+
+    .social-btn:hover {
+      background: #e2eaf9;
+      border-color: #c0cee6;
+    }
+
+    .footer {
+      margin-top: 28px;
+      font-size: 13px;
+      color: #6a7b97;
+      text-align: center;
+      border-top: 1px solid #eef3fc;
+      padding-top: 20px;
+    }
+
+    .footer a {
+      color: #0033a0;
+      text-decoration: none;
+    }
+
+    .btn-small {
+      padding: 8px 18px;
+      font-size: 14px;
+      border-radius: 40px;
+      background: #f0f4fe;
+      text-decoration: none;
+      color: #0b1a33;
+      display: inline-block;
+      border: 1px solid #d0d9e8;
+      transition: 0.2s;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-small:hover {
+      background: #e2eaf9;
+    }
+
+    /* Скрываемые блоки */
+    .checklist-block {
+      display: none;
+      margin-top: 16px;
+      background: #f8faff;
+      border-radius: 18px;
+      padding: 20px 18px;
+      border-left: 4px solid #ffc72c;
+      border: 1px solid #eef3fc;
+    }
+
+    .checklist-block.show {
+      display: block;
+    }
+
+    .checklist-block ol {
+      padding-left: 20px;
+      margin: 12px 0;
+    }
+
+    .checklist-block ol li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .checklist-block .pdf-link {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- ПРОФИЛЬ -->
+    <div class="profile">
+      <div class="avatar"></div>
+      <h1>Екатерина Серикова</h1>
+      <div class="subhead">Руководитель юридической фирмы</div>
+      <div class="tagline">⚖️ Авто · Кредиты · Банкротство · Неустойки</div>
+      <p class="desc">
+        15 лет практики. Защищаю права в спорах со страховыми, банками и застройщиками.
+        Работаю в Саратове и дистанционно по всей России.
+      </p>
+    </div>
+
+    <!-- КНОПКИ СВЯЗИ -->
+    <div class="button-group">
+      <a href="tel:+79658800500" class="btn btn-primary">
+        <span class="icon">📞</span> Позвонить +7 (965) 880-05-00
+      </a>
+      <a href="https://t.me/pravofff" target="_blank" class="btn btn-outline">
+        <span class="icon">💬</span> Написать в Telegram
+      </a>
+      <a href="https://vk.com/zakon64" target="_blank" class="btn btn-outline">
+        <span class="icon">📢</span> Группа ВКонтакте
+      </a>
+      <a href="https://max.ru/u/f9LHodD0cOKvkCvWX6zFbffWJnQtYo9wr7enQKo5uqJNM76WZ8uQZ_Wir5g" target="_blank" class="btn btn-outline">
+        <span class="icon">📨</span> Max Мессенджер
+      </a>
+      <a href="mailto:yristengels@mail.ru" class="btn btn-outline">
+        <span class="icon">✉️</span> yristengels@mail.ru
+      </a>
+      <a href="https://rightdecision.tilda.ws" target="_blank" class="btn btn-outline">
+        <span class="icon">🌐</span> Перейти на сайт
+      </a>
+    </div>
+
+    <!-- УСЛУГИ -->
+    <div class="section-title">📋 Услуги <span>15 лет</span></div>
+    <div class="services-list">
+      <div class="service-item"><span class="emoji">🚗</span> Автоюрист (ОСАГО/КАСКО/ДТП)</div>
+      <div class="service-item"><span class="emoji">💳</span> Кредитные споры, банкротство</div>
+      <div class="service-item"><span class="emoji">⚖️</span> Взыскание неустоек (ДДУ, договоры)</div>
+      <div class="service-item"><span class="emoji">🏛️</span> Представительство в судах</div>
+    </div>
+
+    <!-- АДРЕС -->
+    <div class="section-title">📍 Адрес офиса</div>
+    <div class="address-box">
+      <span class="pin">📍</span>
+      <div>
+        <strong>Саратов, Соборная площадь, д. 5</strong>
+        <div style="font-size:14px; color:#3a4b66; margin-top:2px;">
+          <a href="https://yandex.ru/maps/?text=Саратов%20Соборная%20площадь%205" target="_blank" style="color:#0033a0; text-decoration:none; font-weight:500;">🗺️ Проложить маршрут →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ОТЗЫВЫ -->
+    <div class="section-title">⭐ Отзывы клиентов</div>
+    <div class="review">
+      «Екатерина помогла взыскать 180 000 ₽ неустойки со страховой. Всё сделала быстро и без бюрократии. Рекомендую!»
+      <div class="author">— Александр, Саратов</div>
+    </div>
+    <div class="review">
+      «Спасибо за помощь в банкротстве. Процесс был понятным и без стресса. Чувствуется профессионализм и человеческое отношение.»
+      <div class="author">— Ольга, Энгельс</div>
+    </div>
+    <div class="review">
+      «Страховая затягивала выплату по ДТП. Екатерина быстро подготовила претензию и иск, через месяц получил неустойку. Очень доволен!»
+      <div class="author">— Дмитрий, Саратов</div>
+    </div>
+
+    <!-- ПОЛЕЗНЫЕ МАТЕРИАЛЫ (две кнопки) -->
+    <div class="section-title">📄 Полезные материалы</div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:4px;">
+      <button class="btn-small" onclick="toggleChecklist()" style="background:#0033a0; color:white; border:none;">
+        📋 Чек-лист после ДТП
+      </button>
+      <button class="btn-small" onclick="togglePenalty()" style="background:#0033a0; color:white; border:none;">
+        📋 Памятка по неустойке
+      </button>
+    </div>
+
+    <!-- БЛОК ЧЕК-ЛИСТА (скрытый) -->
+    <div id="checklist" class="checklist-block">
+      <h4 style="margin-bottom:8px; color:#0b1a33;">🚗 Чек-лист действий после ДТП</h4>
+      <ol>
+        <li><strong>Остановитесь и включите аварийку.</strong> Убедитесь, что вам и пассажирам ничего не угрожает.</li>
+        <li><strong>Вызовите ГИБДД и скорую помощь</strong> (при необходимости). Не покидайте место до приезда инспекторов.</li>
+        <li><strong>Сфотографируйте место происшествия:</strong> общий план, повреждения, номера машин, VIN (если видно).</li>
+        <li><strong>Запишите данные свидетелей</strong> (ФИО, телефон, номер машины).</li>
+        <li><strong>Сообщите страховой компании</strong> о ДТП в течение 3 рабочих дней.</li>
+        <li><strong>Заберите у сотрудников ГИБДД</strong> справку о ДТП, протокол, постановление.</li>
+        <li><strong>Оцените повреждения</strong> (можно вызвать независимого эксперта).</li>
+        <li><strong>Не подписывайте документы</strong> о том, что у вас нет претензий, до консультации с юристом.</li>
+        <li><strong>Соберите документы</strong> для подачи заявления в страховую (паспорт, водительское, документы на авто, справки, реквизиты).</li>
+        <li><strong>Обратитесь к юристу</strong>, если страховая занижает выплату или тянет время.</li>
+      </ol>
+      <div class="pdf-link">
+        <a href="#" class="btn-small" style="background:#0033a0; color:white; border:none; padding:10px 24px; text-decoration:none;">
+          📎 Скачать чек-лист (PDF)
+        </a>
+      </div>
+    </div>
+
+    <!-- БЛОК ПАМЯТКИ ПО НЕУСТОЙКЕ (скрытый) -->
+    <div id="penalty" class="checklist-block">
+      <h4 style="margin-bottom:8px; color:#0b1a33;">⚖️ Памятка по взысканию неустойки</h4>
+      <p style="font-size:14px; margin-bottom:12px;"><strong>По ОСАГО:</strong></p>
+      <ul style="padding-left:20px; margin-bottom:12px; font-size:14px;">
+        <li>Неустойка = 1/75 ставки рефинансирования ЦБ РФ от суммы страхового возмещения за каждый день просрочки.</li>
+        <li>Срок выплаты: 20 календарных дней (кроме праздничных) с момента подачи заявления.</li>
+        <li>Максимальный размер неустойки не ограничен законом, но суды часто снижают по ст. 333 ГК РФ.</li>
+      </ul>
+      <p style="font-size:14px; margin-bottom:12px;"><strong>По ДДУ (договор долевого участия):</strong></p>
+      <ul style="padding-left:20px; margin-bottom:12px; font-size:14px;">
+        <li>Неустойка = 1/150 ставки рефинансирования ЦБ РФ (для физлиц) или 1/300 (для юрлиц) от цены договора за каждый день просрочки.</li>
+        <li>Срок просрочки считается с момента, когда застройщик должен был передать квартиру.</li>
+        <li>Неустойка взыскивается только в судебном порядке (досудебная претензия обязательна).</li>
+      </ul>
+      <p style="font-size:14px; margin-bottom:12px;"><strong>Важно:</strong> перед подачей в суд необходимо направить досудебную претензию застройщику или страховщику. Срок ответа – 10–30 дней. После этого можно подавать иск.</p>
+      <div class="pdf-link">
+        <a href="#" class="btn-small" style="background:#0033a0; color:white; border:none; padding:10px 24px; text-decoration:none;">
+          📎 Скачать памятку (PDF)
+        </a>
+      </div>
+    </div>
+
+    <!-- СОЦСЕТИ И МЕССЕНДЖЕРЫ -->
+    <div class="section-title">📱 Мы в соцсетях</div>
+    <div class="social-grid">
+      <a href="https://vk.com/sea1303" target="_blank" class="social-btn">🔵 ВК (личная)</a>
+      <a href="https://vk.com/zakon64" target="_blank" class="social-btn">🔵 Группа ВК</a>
+      <a href="https://t.me/pravofff" target="_blank" class="social-btn">✈️ Telegram-канал</a>
+      <a href="https://vk.me/sea1303" target="_blank" class="social-btn">💬 ВК Мессенджер</a>
+      <a href="https://yandex.ru/chat/p/c9e74d5f-da3c-4150-bfe8-73c740c5a6f0" target="_blank" class="social-btn">📨 Яндекс.Чат</a>
+      <a href="https://max.ru/u/f9LHodD0cOKvkCvWX6zFbffWJnQtYo9wr7enQKo5uqJNM76WZ8uQZ_Wir5g" target="_blank" class="social-btn">📨 Max Мессенджер</a>
+    </div>
+
+    <!-- ФУТЕР -->
+    <div class="footer">
+      ☎ <a href="tel:+79658800500">+7 (965) 880-05-00</a> &nbsp;|&nbsp; ✉ <a href="mailto:yristengels@mail.ru">yristengels@mail.ru</a>
+      <br>
+      © Екатерина Серикова, 2026
+    </div>
+
+  </div>
+
+  <!-- JavaScript для показа/скрытия блоков -->
+  <script>
+    function toggleChecklist() {
+      var block = document.getElementById('checklist');
+      block.classList.toggle('show');
+    }
+    function togglePenalty() {
+      var block = document.getElementById('penalty');
+      block.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
